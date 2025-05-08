@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obenewa Adu | Psychology Meets Marketing</title>
+    <style>
+        :root {
+            --primary: #ffb6c1;
+            --secondary: #f0f8ff;
+            --accent: #ffde59;
+            --dark: #333;
+            --light: #fff;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        body {
+            background-color: var(--secondary);
+            color: var(--dark);
+            overflow-x: hidden;
+        }
+        
+        .navbar {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+        
+        .menu-toggle {
+            width: 40px;
+            height: 30px;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        
+        .menu-toggle span {
+            display: block;
+            height: 3px;
+            width: 100%;
+            background-color: var(--dark);
+            transition: all 0.3s ease;
+        }
+        
+        .hero {
+            height: 100vh;
+            background: linear-gradient(135deg, var(--primary) 0%, #ffdde1 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-content {
+            text-align: center;
+            z-index: 2;
+            padding: 2rem;
+        }
+        
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+            font-weight: 700;
+        }
+        
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            color: var(--dark);
+        }
+        
+        .hero-circles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+        }
+        
+        .circle-1 {
+            width: 300px;
+            height: 300px;
+            top: 10%;
+            left: 10%;
+        }
+        
+        .circle-2 {
+            width: 200px;
+            height: 200px;
+            bottom: 20%;
+            right: 15%;
+        }
+        
+        .circle-3 {
+            width: 150px;
+            height: 150px;
+            bottom: 30%;
+            left: 20%;
+        }
+        
+        .star-icon {
+            font-size: 3rem;
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+        
+        .about {
+            padding: 5rem 2rem;
+            background-color: var(--light);
+        }
+        
+        .about-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+        
+        .about-text {
+            flex: 1 1 500px;
+        }
+        
+        .about h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .about h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            height: 4px;
+            width: 60%;
+            background-color: var(--accent);
+        }
+        
+        .about p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+        
+        .about-image {
+            flex: 1 1 400px;
+            position: relative;
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .skills {
+            padding: 5rem 2rem;
+            background-color: var(--primary);
+        }
+        
+        .skills-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .skills h2 {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            text-align: center;
+            color: var(--dark);
+        }
+        
+        .skill-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .skill-card {
+            background-color: var(--light);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .skill-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .skill-card h3 {
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .skill-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .tools {
+            padding: 5rem 2rem;
+            background-color: var(--light);
+        }
+        
+        .tools-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .tools h2 {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+        
+        .tools-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+        
+        .tool-item {
+            background-color: var(--primary);
+            color: var(--dark);
+            padding: 0.8rem 1.5rem;
+            border-radius: 30px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .tool-item:hover {
+            background-color: var(--accent);
+            transform: scale(1.05);
+        }
+        
+        .connect {
+            padding: 5rem 2rem;
+            background-color: var(--secondary);
+            text-align: center;
+        }
+        
+        .connect-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .connect h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .connect p {
+            margin-bottom:,2rem;
+            font-size: 1.2rem;
+        }
+        
+        .connect-button {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 1rem 2rem;
+            background-color: var(--primary);
+            color: var(--dark);
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .connect-button:hover {
+            background-color: var(--accent);
+            transform: scale(1.05);
+        }
+        
+        footer {
+            padding: 2rem;
+            background-color: var(--dark);
+            color: var(--light);
+            text-align: center;
+        }
+        
+        .contact-info {
+            margin-bottom: 1rem;
+        }
+        
+        .contact-info a {
+            color: var(--light);
+            text-decoration: none;
+        }
+        
+        .contact-info a:hover {
+            text-decoration: underline;
+            color: var(--primary);
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.2rem;
+            }
+            
+            .about, .skills, .tools, .connect {
+                padding: 3rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <div class="navbar">
+        <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-circles">
+            <div class="circle circle-1"></div>
+            <div class="circle circle-2"></div>
+            <div class="circle circle-3"></div>
+        </div>
+        <div class="hero-content">
+            <div class="star-icon">★</div>
+            <h1>Obenewa Adu</h1>
+            <p>Where Psychology Meets Marketing</p>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section class="about">
+        <div class="about-content">
+            <div class="about-text">
+                <h2>Hello, I'm Obenewa</h2>
+                <p>Originally from the USA and now based in London, I blend my background in Psychology with Marketing expertise to create strategies that truly connect with people.</p>
+                <p>I believe that understanding human behavior is at the heart of effective marketing. My unique perspective allows me to bridge the gap between consumer psychology and brand communication.</p>
+                <p>Whether I'm analyzing consumer motivations or crafting compelling brand narratives, I'm driven by curiosity about the "why" behind our choices.</p>
+            </div>
+            <div class="about-image">
+                <img src="/api/placeholder/600/400" alt="Coastal landscape view">
+            </div>
+        </div>
+    </section>
+    
+    <!-- Skills Section -->
+    <section class="skills">
+        <div class="skills-content">
+            <h2>My Approach</h2>
+            <div class="skill-grid">
+                <div class="skill-card">
+                    <h3>Consumer Behaviour Analysis</h3>
+                    <p>Uncovering the emotional, environmental, and cognitive drivers behind purchasing decisions.</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Brand Development</h3>
+                    <p>Creating authentic brand identities that resonate with target audiences on a psychological level.</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Digital Marketing Strategy</h3>
+                    <p>Developing data-driven strategies that leverage behavioral insights for meaningful engagement.</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Content Creation</h3>
+                    <p>Telling compelling stories that connect emotionally while remaining grounded in strategic insights.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Tools Section -->
+    <section class="tools">
+        <div class="tools-content">
+            <h2>My Toolkit</h2>
+            <div class="tools-list">
+                <div class="tool-item">Adobe Photoshop</div>
+                <div class="tool-item">Figma</div>
+                <div class="tool-item">Canva</div>
+                <div class="tool-item">Jira</div>
+                <div class="tool-item">Microsoft Excel</div>
+                <div class="tool-item">SPSS</div>
+                <div class="tool-item">HTML/CSS</div>
+                <div class="tool-item">JavaScript</div>
+                <div class="tool-item">Python</div>
+                <div class="tool-item">GenAI</div>
+                <div class="tool-item">Prompting</div>
+                <div class="tool-item">Agents</div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Connect Section -->
+    <section class="connect">
+        <div class="connect-content">
+            <h2>Let's Connect</h2>
+            <p>I thrive in new environments and embrace every opportunity to learn. Whether you're looking to collaborate, share ideas, or explore the fascinating intersection of psychology and marketing, I'd love to hear from you.</p>
+            <a href="mailto:obenewaadu0606@gmail.com" class="connect-button">Get In Touch</a>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="contact-info">
+            <p>London, United Kingdom</p>
+            <p><a href="mailto:obenewaadu0606@gmail.com">obenewaadu0606@gmail.com</a> | +44 7951 641 912</p>
+            <p><a href="https://www.linkedin.com/in/obenewa">www.linkedin.com/in/obenewa</a></p>
+        </div>
+        <p>&copy; 2025 Obenewa Adu</p>
+    </footer>
+</body>
+</html>
