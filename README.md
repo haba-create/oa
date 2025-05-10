@@ -358,11 +358,11 @@
             <div class="about-text">
                 <h2>Hello, I'm Obenewa</h2>
                 <p>Originally from the USA and now based in London, I blend my background in Psychology with Marketing expertise to create strategies that truly connect with people.</p>
-                <p>I believe that understanding human behavior is at the heart of effective marketing. My unique perspective allows me to bridge the gap between consumer psychology and brand communication.</p>
-                <p>Whether I'm analyzing consumer motivations or crafting compelling brand narratives, I'm driven by curiosity about the "why" behind our choices.</p>
+                <p> Understanding human behaviour is at the heart of effective marketing. My unique perspective allows me to bridge the gap between consumer psychology and brand communication.</p>
+                <p>Whether analysing consumer motivations or crafting compelling brand narratives, I'm driven by curiosity about the "why" behind our choices.</p>
             </div>
             <div class="about-image">
-                <img src="/api/placeholder/600/400" alt="Coastal landscape view">
+                <img src="/api/placeholder/600/400" alt="">
             </div>
         </div>
     </section>
@@ -382,7 +382,7 @@
                 </div>
                 <div class="skill-card">
                     <h3>Digital Marketing Strategy</h3>
-                    <p>Developing data-driven strategies that leverage behavioral insights for meaningful engagement.</p>
+                    <p>Developing data-driven strategies that leverage behavioural insights for meaningful engagement.</p>
                 </div>
                 <div class="skill-card">
                     <h3>Content Creation</h3>
