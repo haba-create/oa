@@ -71,7 +71,7 @@ Mobile (< 768px)
 🤝 Contact
 For inquiries or collaborations:
 
-Email: obenewaadu0606@gmail.com
+Email:https://www.obenewa.co.uk
 LinkedIn: linkedin.com/in/obenewa
 Location: London, United Kingdom
 
