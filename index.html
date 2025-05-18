@@ -365,3 +365,116 @@ body {
     </div>
     <p>&copy; 2025 Obenewa Adu</p>
 </footer>
+  <script type="module">
+    import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
+    Chatbot.init({
+        chatflowid: "06d71418-c9cd-430e-a68b-cd8b8f767dd5",
+        apiHost: "https://cloud.flowiseai.com",
+        chatflowConfig: {
+            /* Chatflow Config */
+        },
+        observersConfig: {
+            /* Observers Config */
+        },
+        theme: {
+            button: {
+                backgroundColor: '#e91e63',
+                right: 20,
+                bottom: 20,
+                size: 48,
+                dragAndDrop: true,
+                iconColor: 'white',
+                customIconSrc: 'https://cdn-icons-png.flaticon.com/512/4233/4233839.png',
+                autoWindowOpen: {
+                    autoOpen: true,
+                    openDelay: 2,
+                    autoOpenOnMobile: false
+                }
+            },
+            tooltip: {
+                showTooltip: true,
+                tooltipMessage: 'Discover our Pink Collection 💕',
+                tooltipBackgroundColor: '#e91e63',
+                tooltipTextColor: 'white',
+                tooltipFontSize: 16
+            },
+            disclaimer: {
+                title: 'Welcome to OA',
+                message: "Our Ocean Aura assistant is here to help you with sustainable swimwear choices. By continuing, you agree to our <a target=\"_blank\" href=\"#\">Privacy Policy</a>",
+                textColor: '#666',
+                buttonColor: '#e91e63',
+                buttonText: 'Explore Collection',
+                buttonTextColor: 'white',
+                blurredBackgroundColor: 'rgba(233, 30, 99, 0.2)',
+                backgroundColor: '#fff8f5'
+            },
+            customCSS: `
+                @import url('https://fonts.googleapis.com/css2?family=Fahkwang:wght@300;400;500&display=swap');
+                .flowise-chat * {
+                    font-family: 'Fahkwang', sans-serif;
+                }
+            `,
+            chatWindow: {
+                showTitle: true,
+                showAgentMessages: true,
+                title: 'OA Pink Collection',
+                titleAvatarSrc: 'https://cdn-icons-png.flaticon.com/512/4233/4233839.png',
+                welcomeMessage: 'Welcome to Ocean Aura. How can I help you explore our sustainable Pink Collection today?',
+                errorMessage: 'Sorry, I encountered an issue. Please try again or contact our support team.',
+                backgroundColor: '#fff8f5',
+                backgroundImage: '',
+                height: 700,
+                width: 400,
+                fontSize: 16,
+                starterPrompts: [
+                    "Tell me about sustainable swimwear",
+                    "What natural fibers do you use?",
+                    "Show me the Pink Collection",
+                    "What makes OA ethical?"
+                ],
+                starterPromptFontSize: 15,
+                clearChatOnReload: false,
+                sourceDocsTitle: 'Sources:',
+                renderHTML: true,
+                botMessage: {
+                    backgroundColor: '#ffeef2',
+                    textColor: '#666',
+                    showAvatar: true,
+                    avatarSrc: 'https://cdn-icons-png.flaticon.com/512/4233/4233839.png'
+                },
+                userMessage: {
+                    backgroundColor: '#e91e63',
+                    textColor: '#ffffff',
+                    showAvatar: true,
+                    avatarSrc: 'https://cdn-icons-png.flaticon.com/512/1077/1077063.png'
+                },
+                textInput: {
+                    placeholder: 'Ask about our sustainable swimwear...',
+                    backgroundColor: '#ffffff',
+                    textColor: '#666',
+                    sendButtonColor: '#e91e63',
+                    maxChars: 50,
+                    maxCharsWarningMessage: 'Please keep your message under 50 characters.',
+                    autoFocus: true,
+                    sendMessageSound: true,
+                    sendSoundLocation: 'send_message.mp3',
+                    receiveMessageSound: true,
+                    receiveSoundLocation: 'receive_message.mp3'
+                },
+                feedback: {
+                    color: '#e91e63'
+                },
+                dateTimeToggle: {
+                    date: true,
+                    time: true
+                },
+                footer: {
+                    textColor: '#666',
+                    text: 'Powered by',
+                    company: 'Ocean Aura',
+                    companyLink: '#'
+                }
+            }
+        }
+    })
+</script>
