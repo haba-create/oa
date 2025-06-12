@@ -20,6 +20,7 @@
       --baby-pink: #fcd9e3;
       --dark: #333333;
       --light: #ffffff;
+      --neutral: #f8f9fa;
       --shadow: rgba(248, 187, 217, 0.3);
     }
 
@@ -32,7 +33,7 @@
     }
 
     body {
-      background-color: var(--accent);
+      background-color: var(--light);
       color: var(--dark);
       overflow-x: hidden;
       scroll-behavior: smooth;
@@ -45,13 +46,13 @@
       left: 0;
       right: 0;
       padding: 20px 40px;
-      background: rgba(248, 187, 217, 0.95);
+      background: rgba(255, 255, 255, 0.95);
       backdrop-filter: blur(10px);
       z-index: 1000;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      box-shadow: 0 2px 20px var(--shadow);
+      box-shadow: 0 2px 20px rgba(0,0,0,0.1);
     }
     
     .logo {
@@ -75,7 +76,7 @@
     }
     
     .nav-links a:hover {
-      color: var(--baby-pink);
+      color: var(--accent);
     }
     
     .social-links {
@@ -90,14 +91,14 @@
     }
     
     .social-links a:hover {
-      color: var(--baby-pink);
+      color: var(--accent);
       transform: translateY(-3px);
     }
     
     /* Hero Section */
     .hero {
       height: 100vh;
-      background-color: var(--accent);
+      background-color: var(--light);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -115,7 +116,7 @@
     
     .circle {
       position: absolute;
-      background: rgba(255, 255, 255, 0.1);
+      background: rgba(248, 187, 217, 0.1);
       animation: float 20s infinite ease-in-out;
     }
     
@@ -186,7 +187,7 @@
     
     .star-icon {
       font-size: 3rem;
-      color: var(--baby-pink);
+      color: var(--accent);
       margin-bottom: 1rem;
       animation: pulse 2s infinite;
     }
@@ -216,7 +217,7 @@
     }
     
     .btn-primary {
-      background-color: var(--baby-pink);
+      background-color: var(--accent);
       color: white;
     }
     
@@ -228,12 +229,12 @@
     
     .btn-secondary {
       background-color: white;
-      color: var(--baby-pink);
-      border: 2px solid var(--baby-pink);
+      color: var(--accent);
+      border: 2px solid var(--accent);
     }
     
     .btn-secondary:hover {
-      background-color: var(--baby-pink);
+      background-color: var(--accent);
       color: white;
       transform: translateY(-2px);
     }
@@ -290,7 +291,7 @@
     .achievement-number {
       font-size: 2.5rem;
       font-weight: 600;
-      color: var(--baby-pink);
+      color: var(--accent);
       margin-bottom: 5px;
     }
     
@@ -334,7 +335,7 @@
     .skill-category h3 {
       font-size: 1.5rem;
       margin-bottom: 1.5rem;
-      color: var(--baby-pink);
+      color: var(--accent);
       display: flex;
       align-items: center;
       gap: 10px;
@@ -384,7 +385,7 @@
     /* Tools Section */
     .tools {
       padding: 5rem 2rem;
-      background-color: var(--accent);
+      background-color: var(--neutral);
     }
     
     .tools-content {
@@ -412,7 +413,7 @@
     .tool-category h3 {
       font-size: 1.3rem;
       margin-bottom: 1rem;
-      color: var(--baby-pink);
+      color: var(--accent);
       font-weight: 500;
     }
     
@@ -437,11 +438,11 @@
     }
     
     .tool-item i {
-      color: var(--baby-pink);
+      color: var(--accent);
     }
     
     .tool-item:hover {
-      background-color: var(--baby-pink);
+      background-color: var(--accent);
       color: white;
       transform: scale(1.05);
       box-shadow: 0 5px 20px var(--shadow);
@@ -495,7 +496,7 @@
     .portfolio-item h3 {
       font-size: 1.5rem;
       margin-bottom: 1rem;
-      color: var(--baby-pink);
+      color: var(--accent);
       font-weight: 500;
     }
     
@@ -512,7 +513,7 @@
     }
     
     .portfolio-link {
-      color: var(--baby-pink);
+      color: var(--accent);
       text-decoration: none;
       font-weight: 500;
       display: flex;
@@ -522,13 +523,13 @@
     }
     
     .portfolio-link:hover {
-      color: var(--baby-pink);
+      color: var(--accent);
     }
     
     /* Connect Section */
     .connect {
       padding: 5rem 2rem;
-      background: rgba(248, 187, 217, 0.95);
+      background: linear-gradient(135deg, var(--light-pink) 0%, var(--baby-pink) 100%);
       text-align: center;
     }
     
@@ -562,7 +563,7 @@
     /* Footer */
     footer {
       padding: 3rem 2rem;
-      background: rgba(248, 187, 217, 0.95);
+      background: var(--neutral);
       color: var(--dark);
       text-align: center;
     }
@@ -640,7 +641,7 @@
     <div class="about-content">
       <div class="about-text">
         <h2>Hello, I'm Obenewa</h2>
-        <p>Originally from New York and now based in London, I blend my background in Psychology with cutting-edge AI technology to create marketing strategies that truly connect with people.</p>
+        <p>Originally from New York and now based in London, I blend my background in Psychology with research and cutting-edge AI technology to create marketing strategies that truly connect with people.</p>
         <p>I specialise in building tool-using AI agents that automate complex marketing workflows. My unique perspective allows me to bridge the gap between consumer psychology, brand communication, and artificial intelligence.</p>
         <p>Whether developing autonomous AI systems with Flowise, analysing consumer motivations with SPSS, or crafting compelling brand narratives, I'm driven by curiosity about the "why" behind our choices and how technology can enhance human connection.</p>
       </div>
@@ -658,7 +659,7 @@
           <div class="achievement-text">User Satisfaction</div>
         </div>
         <div class="achievement-card">
-          <div class="achievement-number">90%</div>
+          <div class="achievement-number">93%</div>
           <div class="achievement-text">ROI Improvement</div>
         </div>
       </div>
