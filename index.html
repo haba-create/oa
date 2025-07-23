@@ -382,6 +382,93 @@
       font-weight: 300;
     }
     
+    /* Research Section */
+    .research {
+      padding: 5rem 2rem;
+      background-color: var(--light-pink);
+    }
+    
+    .research-content {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .research h2 {
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+      text-align: center;
+      color: var(--dark);
+      font-weight: 500;
+    }
+    
+    .research-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+    }
+    
+    .research-item {
+      background-color: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px var(--shadow);
+      transition: transform 0.3s ease;
+    }
+    
+    .research-item:hover {
+      transform: translateY(-10px);
+    }
+    
+    .research-content-inner {
+      padding: 2rem;
+    }
+    
+    .research-item h3 {
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+      color: var(--dark);
+      font-weight: 500;
+      line-height: 1.3;
+    }
+    
+    .research-method {
+      font-size: 0.9rem;
+      color: var(--accent);
+      font-weight: 500;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    
+    .research-item p {
+      color: #666;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+      font-weight: 300;
+    }
+    
+    .research-skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    
+    .skill-tag {
+      background-color: var(--baby-pink);
+      color: var(--dark);
+      padding: 0.3rem 0.8rem;
+      border-radius: 15px;
+      font-size: 0.8rem;
+      font-weight: 400;
+      transition: all 0.3s ease;
+    }
+    
+    .skill-tag:hover {
+      background-color: var(--accent);
+      color: white;
+      transform: scale(1.05);
+    }
+    
     /* Tools Section */
     .tools {
       padding: 5rem 2rem;
@@ -594,6 +681,10 @@
         padding: 0.8rem;
       }
       
+      .research-grid {
+        grid-template-columns: 1fr;
+      }
+      
       .portfolio-grid {
         grid-template-columns: 1fr;
       }
@@ -612,6 +703,7 @@
     <div class="nav-links">
       <a href="#about">About</a>
       <a href="#skills">Expertise</a>
+      <a href="#research">Research</a>
       <a href="#portfolio">Projects</a>
       <a href="#connect">Connect</a>
       <div class="social-links">
@@ -719,6 +811,56 @@
               </div>
             </li>
           </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Research Section -->
+  <section class="research" id="research">
+    <div class="research-content">
+      <h2>Academic Research</h2>
+      <div class="research-grid">
+        <div class="research-item">
+          <div class="research-content-inner">
+            <h3>Qualitative Study: Stress, Wellbeing & Impulsive Spending</h3>
+            <div class="research-method">Reflexive Thematic Analysis</div>
+            <p>Explored psychological links between stress and impulsive spending among university students using semi-structured interviews. Identified three key themes including emotional self-regulation patterns and social media triggers, providing insights for targeted wellbeing interventions.</p>
+            <div class="research-skills">
+              <span class="skill-tag">Qualitative Research</span>
+              <span class="skill-tag">Thematic Analysis</span>
+              <span class="skill-tag">Interview Design</span>
+              <span class="skill-tag">BPS Ethics</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="research-item">
+          <div class="research-content-inner">
+            <h3>Mixed-Methods: Sleep, Stress & Personality Factors</h3>
+            <div class="research-method">Quantitative + Qualitative Analysis</div>
+            <p>Investigated predictive relationships between neuroticism, psychopathy, stress, and sleep latency using advanced statistical methods. Found neuroticism significantly predicted longer sleep latency (p < .001), contributing to sleep health understanding.</p>
+            <div class="research-skills">
+              <span class="skill-tag">SPSS Analysis</span>
+              <span class="skill-tag">Regression</span>
+              <span class="skill-tag">ANOVA</span>
+              <span class="skill-tag">Mixed Methods</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="research-item">
+          <div class="research-content-inner">
+            <h3>Consumer Psychology: Colour & Cultural Perceptions</h3>
+            <div class="research-method">Quantitative Survey Research</div>
+            <p>Examined how colour psychology and cultural perceptions influence buying decisions across diverse participants. Revealed meaningful cultural trends in aesthetic preferences, with bold colours accounting for 48% of variance across nationalities.</p>
+            <div class="research-skills">
+              <span class="skill-tag">Survey Design</span>
+              <span class="skill-tag">Cross-Cultural Research</span>
+              <span class="skill-tag">Consumer Behaviour</span>
+              <span class="skill-tag">Statistical Analysis</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
