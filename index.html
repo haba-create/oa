@@ -5,8 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Obenewa Adu | Marketing Psychology</title>
   
-  <!-- Font Awesome for Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Multiple Font Awesome CDN Sources for Fallback -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css">
   
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -37,6 +38,16 @@
       color: var(--dark);
       overflow-x: hidden;
       scroll-behavior: smooth;
+    }
+    
+    /* Fallback for missing icons */
+    .icon-fallback {
+      display: inline-block;
+      width: 1em;
+      height: 1em;
+      margin-right: 0.5em;
+      text-align: center;
+      font-weight: bold;
     }
     
     /* Navigation */
@@ -695,6 +706,29 @@
       }
     }
   </style>
+
+  <!-- Test if Font Awesome is loading -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Check if Font Awesome loaded
+      setTimeout(() => {
+        const testIcon = document.createElement('i');
+        testIcon.className = 'fas fa-heart';
+        document.body.appendChild(testIcon);
+        
+        const computedStyle = window.getComputedStyle(testIcon, ':before');
+        const content = computedStyle.getPropertyValue('content');
+        
+        if (content === 'none' || content === '') {
+          console.warn('Font Awesome not loaded - using fallbacks');
+          // Add fallback class to body for CSS targeting
+          document.body.classList.add('no-fontawesome');
+        }
+        
+        document.body.removeChild(testIcon);
+      }, 100);
+    });
+  </script>
 </head>
 <body>
   <!-- Navigation -->
@@ -707,9 +741,18 @@
       <a href="#portfolio">Projects</a>
       <a href="#connect">Connect</a>
       <div class="social-links">
-        <a href="https://www.linkedin.com/in/obenewa" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="https://github.com/obenewa" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="mailto:obenewa@obenewa.co.uk"><i class="fas fa-envelope"></i></a>
+        <a href="https://www.linkedin.com/in/obenewa" target="_blank">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+          <span class="sr-only">LinkedIn</span>
+        </a>
+        <a href="https://github.com/obenewa" target="_blank">
+          <i class="fab fa-github" aria-hidden="true"></i>
+          <span class="sr-only">GitHub</span>
+        </a>
+        <a href="mailto:obenewa@obenewa.co.uk">
+          <i class="fas fa-envelope" aria-hidden="true"></i>
+          <span class="sr-only">Email</span>
+        </a>
       </div>
     </div>
   </nav>
@@ -765,7 +808,10 @@
       <div class="skill-categories">
         <!-- AI & Automation -->
         <div class="skill-category">
-          <h3><i class="fas fa-robot"></i> AI Agent Development & Automation</h3>
+          <h3>
+            <i class="fas fa-robot" aria-hidden="true"></i>
+            AI Agent Development & Automation
+          </h3>
           <ul class="skill-list">
             <li>
               <div class="skill-item-content">
@@ -790,7 +836,10 @@
         
         <!-- Marketing & Psychology -->
         <div class="skill-category">
-          <h3><i class="fas fa-brain"></i> Marketing Psychology</h3>
+          <h3>
+            <i class="fas fa-brain" aria-hidden="true"></i>
+            Marketing Psychology
+          </h3>
           <ul class="skill-list">
             <li>
               <div class="skill-item-content">
@@ -875,16 +924,46 @@
         <div class="tool-category">
           <h3>AI & Development</h3>
           <div class="tools-list">
-            <div class="tool-item"><i class="fas fa-robot"></i> Flowise</div>
-            <div class="tool-item"><i class="fas fa-brain"></i> ChatGPT API</div>
-            <div class="tool-item"><i class="fab fa-python"></i> Python</div>
-            <div class="tool-item"><i class="fab fa-js"></i> JavaScript</div>
-            <div class="tool-item"><i class="fab fa-react"></i> React</div>
-            <div class="tool-item"><i class="fab fa-node-js"></i> Node.js</div>
-            <div class="tool-item"><i class="fas fa-code"></i> HTML/CSS</div>
-            <div class="tool-item"><i class="fab fa-github"></i> Git/GitHub</div>
-            <div class="tool-item"><i class="fas fa-wind"></i> Windsurf</div>
-            <div class="tool-item"><i class="fas fa-cursor"></i> Cursor AI</div>
+            <div class="tool-item">
+              <i class="fas fa-robot" aria-hidden="true"></i>
+              Flowise
+            </div>
+            <div class="tool-item">
+              <i class="fas fa-brain" aria-hidden="true"></i>
+              ChatGPT API
+            </div>
+            <div class="tool-item">
+              <i class="fab fa-python" aria-hidden="true"></i>
+              Python
+            </div>
+            <div class="tool-item">
+              <i class="fab fa-js-square" aria-hidden="true"></i>
+              JavaScript
+            </div>
+            <div class="tool-item">
+              <i class="fab fa-react" aria-hidden="true"></i>
+              React
+            </div>
+            <div class="tool-item">
+              <i class="fab fa-node-js" aria-hidden="true"></i>
+              Node.js
+            </div>
+            <div class="tool-item">
+              <i class="fab fa-html5" aria-hidden="true"></i>
+              HTML/CSS
+            </div>
+            <div class="tool-item">
+              <i class="fab fa-github" aria-hidden="true"></i>
+              Git/GitHub
+            </div>
+            <div class="tool-item">
+              <i class="fas fa-wind" aria-hidden="true"></i>
+              Windsurf
+            </div>
+            <div class="tool-item">
+              <i class="fas fa-code" aria-hidden="true"></i>
+              Cursor AI
+            </div>
           </div>
         </div>
         
@@ -892,12 +971,30 @@
         <div class="tool-category">
           <h3>Marketing & Analytics</h3>
           <div class="tools-list">
-            <div class="tool-item"><i class="fas fa-chart-line"></i> Google Analytics 4</div>
-            <div class="tool-item"><i class="fas fa-chart-bar"></i> SPSS </div>
-            <div class="tool-item"><i class="fab fa-hubspot"></i> HubSpot</div>
-            <div class="tool-item"><i class="fas fa-envelope"></i> SendGrid</div>
-            <div class="tool-item"><i class="fab fa-facebook"></i> Meta Business Suite</div>
-            <div class="tool-item"><i class="fas fa-file-excel"></i> Excel (Advanced)</div>
+            <div class="tool-item">
+              <i class="fas fa-chart-line" aria-hidden="true"></i>
+              Google Analytics 4
+            </div>
+            <div class="tool-item">
+              <i class="fas fa-chart-bar" aria-hidden="true"></i>
+              SPSS
+            </div>
+            <div class="tool-item">
+              <i class="fas fa-cog" aria-hidden="true"></i>
+              HubSpot
+            </div>
+            <div class="tool-item">
+              <i class="fas fa-envelope" aria-hidden="true"></i>
+              SendGrid
+            </div>
+            <div class="tool-item">
+              <i class="fab fa-facebook" aria-hidden="true"></i>
+              Meta Business Suite
+            </div>
+            <div class="tool-item">
+              <i class="fas fa-file-excel" aria-hidden="true"></i>
+              Excel (Advanced)
+            </div>
           </div>
         </div>
         
@@ -905,14 +1002,38 @@
         <div class="tool-category">
           <h3>Design & Deployment</h3>
           <div class="tools-list">
-            <div class="tool-item"><i class="fab fa-adobe"></i> Adobe CC</div>
-            <div class="tool-item"><i class="fab fa-figma"></i> Figma</div>
-            <div class="tool-item"><i class="fas fa-paint-brush"></i> Canva Pro</div>
-            <div class="tool-item"><i class="fas fa-train"></i> Railway.app</div>
-            <div class="tool-item"><i class="fab fa-wordpress"></i> WordPress</div>
-            <div class="tool-item"><i class="fab fa-squarespace"></i> Squarespace</div>
-            <div class="tool-item"><i class="fab fa-jira"></i> Jira</div>
-            <div class="tool-item"><i class="fas fa-magic"></i> ReadyMag</div>
+            <div class="tool-item">
+              <i class="fab fa-adobe" aria-hidden="true"></i>
+              Adobe CC
+            </div>
+            <div class="tool-item">
+              <i class="fab fa-figma" aria-hidden="true"></i>
+              Figma
+            </div>
+            <div class="tool-item">
+              <i class="fas fa-palette" aria-hidden="true"></i>
+              Canva Pro
+            </div>
+            <div class="tool-item">
+              <i class="fas fa-train" aria-hidden="true"></i>
+              Railway.app
+            </div>
+            <div class="tool-item">
+              <i class="fab fa-wordpress" aria-hidden="true"></i>
+              WordPress
+            </div>
+            <div class="tool-item">
+              <i class="fas fa-square" aria-hidden="true"></i>
+              Squarespace
+            </div>
+            <div class="tool-item">
+              <i class="fas fa-tasks" aria-hidden="true"></i>
+              Jira
+            </div>
+            <div class="tool-item">
+              <i class="fas fa-magic" aria-hidden="true"></i>
+              ReadyMag
+            </div>
           </div>
         </div>
       </div>
@@ -956,10 +1077,12 @@
       
       <div class="connect-buttons">
         <a href="mailto:obenewa@obenewa.co.uk" class="btn btn-primary">
-          <i class="fas fa-envelope"></i> Get In Touch
+          <i class="fas fa-envelope" aria-hidden="true"></i>
+          Get In Touch
         </a>
         <a href="https://www.linkedin.com/in/obenewa" class="btn btn-secondary" target="_blank">
-          <i class="fab fa-linkedin"></i> Connect on LinkedIn
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+          Connect on LinkedIn
         </a>
       </div>
     </div>
@@ -971,5 +1094,50 @@
       <p>&copy; 2025 Obenewa Adu. All rights reserved.</p>
     </div>
   </footer>
+
+  <!-- CSS fallback for when Font Awesome doesn't load -->
+  <style>
+    /* Fallback styles when Font Awesome fails to load */
+    .no-fontawesome .fab,
+    .no-fontawesome .fas {
+      font-family: serif;
+      font-style: normal;
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      text-align: center;
+    }
+    
+    .no-fontawesome .fab:before,
+    .no-fontawesome .fas:before {
+      font-family: serif;
+    }
+    
+    .no-fontawesome .fa-linkedin:before { content: "in"; }
+    .no-fontawesome .fa-github:before { content: "git"; }
+    .no-fontawesome .fa-envelope:before { content: "@"; }
+    .no-fontawesome .fa-robot:before { content: "🤖"; }
+    .no-fontawesome .fa-brain:before { content: "🧠"; }
+    .no-fontawesome .fa-python:before { content: "🐍"; }
+    .no-fontawesome .fa-js-square:before { content: "JS"; }
+    .no-fontawesome .fa-react:before { content: "⚛"; }
+    .no-fontawesome .fa-node-js:before { content: "node"; }
+    .no-fontawesome .fa-html5:before { content: "</>"; }
+    .no-fontawesome .fa-chart-line:before { content: "📈"; }
+    .no-fontawesome .fa-chart-bar:before { content: "📊"; }
+    .no-fontawesome .fa-cog:before { content: "⚙"; }
+    .no-fontawesome .fa-facebook:before { content: "f"; }
+    .no-fontawesome .fa-file-excel:before { content: "📊"; }
+    .no-fontawesome .fa-adobe:before { content: "A"; }
+    .no-fontawesome .fa-figma:before { content: "fig"; }
+    .no-fontawesome .fa-palette:before { content: "🎨"; }
+    .no-fontawesome .fa-train:before { content: "🚂"; }
+    .no-fontawesome .fa-wordpress:before { content = "W"; }
+    .no-fontawesome .fa-square:before { content: "⬜"; }
+    .no-fontawesome .fa-tasks:before { content: "✓"; }
+    .no-fontawesome .fa-magic:before { content: "✨"; }
+    .no-fontawesome .fa-wind:before { content: "💨"; }
+    .no-fontawesome .fa-code:before { content: "</>"; }
+  </style>
 </body>
-</html>
+</html> 
