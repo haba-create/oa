@@ -33,7 +33,7 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        /* âââ NAV âââ */
+        /* ─── NAV ─── */
         nav {
             position: fixed;
             top: 0;
@@ -70,7 +70,7 @@
         .nav-social a:hover { color: var(--accent); }
         .nav-dot { color: var(--warm-grey); font-size: 0.75rem; }
 
-        /* âââ HERO âââ */
+        /* ─── HERO ─── */
         .hero {
             min-height: 100vh;
             display: flex;
@@ -123,7 +123,7 @@
             transition: all 0.3s;
         }
         .hero-cta:hover { background: var(--dark); color: var(--white); }
-        /* âââ STATS BAR âââ */
+        /* ─── STATS BAR ─── */
         .stats-bar {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -151,7 +151,7 @@
             color: var(--body);
         }
 
-        /* âââ SECTIONS âââ */
+        /* ─── SECTIONS ─── */
         section { padding: 8rem 4rem; }
         .section-label {
             font-size: 0.7rem;
@@ -170,7 +170,7 @@
             margin-bottom: 2rem;
         }
 
-        /* âââ ABOUT âââ */
+        /* ─── ABOUT ─── */
         .about {
             max-width: 700px;
             background: var(--white);
@@ -192,7 +192,7 @@
             color: var(--dark);
         }
 
-        /* âââ EXPERTISE âââ */
+        /* ─── EXPERTISE ─── */
         .expertise { background: var(--off-white); }
         .expertise-grid {
             display: grid;
@@ -222,7 +222,7 @@
             font-weight: 300;
         }
 
-        /* âââ AFIA âââ */
+        /* ─── AFIA ─── */
         .afia { background: var(--dark); color: var(--white); }
         .afia .section-label { color: var(--accent); }
         .afia .section-title { color: var(--white); }
@@ -272,7 +272,7 @@
         }
         .afia-ig:hover { border-bottom-color: var(--accent); }
 
-        /* âââ JOURNAL âââ */
+        /* ─── JOURNAL ─── */
         .journal { background: var(--off-white); }
         .journal-intro {
             font-size: 1rem;
@@ -314,7 +314,7 @@
             font-weight: 300;
         }
 
-        /* âââ RESEARCH âââ */
+        /* ─── RESEARCH ─── */
         .research { background: var(--white); }
         .research-list { margin-top: 4rem; }
         .research-item {
@@ -369,7 +369,7 @@
             justify-self: end;
         }
 
-        /* âââ TOOLS âââ */
+        /* ─── TOOLS ─── */
         .tools { background: var(--off-white); }
         .tools-grid {
             display: flex;
@@ -388,7 +388,7 @@
         }
         .tool-pill:hover { border-color: var(--accent); color: var(--dark); }
 
-        /* âââ CONTACT âââ */
+        /* ─── CONTACT ─── */
         .contact {
             background: var(--cream);
             text-align: center;
@@ -427,7 +427,7 @@
         .contact-link.primary { background: var(--dark); color: var(--white); }
         .contact-link.primary:hover { background: transparent; color: var(--dark); }
 
-        /* âââ FOOTER âââ */
+        /* ─── FOOTER ─── */
         footer {
             padding: 2rem 4rem;
             display: flex;
@@ -441,7 +441,7 @@
         footer a { color: var(--body); text-decoration: none; }
         footer a:hover { color: var(--accent); }
 
-        /* âââ MARQUEE âââ */
+        /* ─── MARQUEE ─── */
         .marquee {
             overflow: hidden;
             white-space: nowrap;
@@ -466,7 +466,7 @@
             100% { transform: translateX(-50%); }
         }
 
-        /* âââ RESPONSIVE âââ */
+        /* ─── RESPONSIVE ─── */
         @media (max-width: 900px) {
             nav { padding: 1rem 2rem; }
             nav.scrolled { padding: 0.8rem 2rem; }
@@ -484,7 +484,7 @@
             .contact-links { flex-direction: column; align-items: center; }
         }
 
-        /* âââ ANIMATIONS âââ */
+        /* ─── ANIMATIONS ─── */
         .fade-in {
             opacity: 0;
             transform: translateY(30px);
@@ -545,7 +545,7 @@
     <div class="about-text">
         <p class="section-label">About</p>
         <h2 class="section-title">Hello, I'm Obenewa</h2>
-        <p>Originally from New York and now based in London, I studied Psychology and Marketing â and that combination shapes everything I do. I blend creative thinking with data-driven strategy to build campaigns and brands that genuinely resonate with people.</p>
+        <p>Originally from New York and now based in London, I studied Psychology and Marketing &mdash; and that combination shapes everything I do. I blend creative thinking with data-driven strategy to build campaigns and brands that genuinely resonate with people.</p>
         <p>I'm equally comfortable analysing consumer behaviour with SPSS as I am crafting brand narratives or building AI agents that automate complex marketing workflows. The best work happens when intuition and analysis work together. Creative thinking backed by real data, strategy grounded in human psychology.</p>
     </div>
 </section>
@@ -600,6 +600,14 @@
         <div class="expertise-card fade-in">
             <h3>Marketing Automation</h3>
             <p>Designing intelligent workflows that handle email automation, CRM operations, content generation, and lead scoring at scale.</p>
+        </div>
+        <div class="expertise-card fade-in">
+            <h3>Talent Sourcing</h3>
+            <p>Identifying and engaging with creators and brand partners using Modash and outreach tools to build authentic collaborations.</p>
+        </div>
+        <div class="expertise-card fade-in">
+            <h3>CRM Strategy</h3>
+            <p>Managing customer relationships and pipelines through HubSpot, automating touchpoints and nurture sequences to drive retention and growth.</p>
         </div>
     </div>
 </section>
