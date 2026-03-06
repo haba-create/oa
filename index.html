@@ -49,14 +49,6 @@
             transition: all 0.3s ease;
         }
         nav.scrolled { padding: 1rem 4rem; box-shadow: 0 2px 20px rgba(0,0,0,0.05); }
-        .nav-logo {
-            font-family: var(--serif);
-            font-size: 1.4rem;
-            font-weight: 400;
-            letter-spacing: 0.02em;
-            color: var(--dark);
-            text-decoration: none;
-        }
         .nav-links { display: flex; gap: 2.5rem; align-items: center; }
         .nav-links a {
             font-size: 0.8rem;
@@ -76,6 +68,7 @@
             transition: color 0.3s;
         }
         .nav-social a:hover { color: var(--accent); }
+        .nav-dot { color: var(--warm-grey); font-size: 0.75rem; }
 
         /* âââ HERO âââ */
         .hero {
@@ -130,16 +123,6 @@
             transition: all 0.3s;
         }
         .hero-cta:hover { background: var(--dark); color: var(--white); }
-        .hero-scroll {
-            position: absolute;
-            bottom: 3rem;
-            font-size: 0.65rem;
-         letter-spacing: 0.3em;
-            text-transform: uppercase;
-            color: var(--body);
-            opacity: 0.5;
-        }
-
         /* âââ STATS BAR âââ */
         .stats-bar {
             display: grid;
@@ -514,7 +497,6 @@
 
 <!-- NAV -->
 <nav id="navbar">
-    <a href="#" class="nav-logo">Obenewa Adu</a>
     <div class="nav-links">
         <a href="#about">About</a>
         <a href="#expertise">Expertise</a>
@@ -525,6 +507,7 @@
     </div>
     <div class="nav-social">
         <a href="https://github.com/obenewaadu" target="_blank">GitHub</a>
+        <span class="nav-dot">&middot;</span>
         <a href="https://www.instagram.com/madebyafia?igsh=ZHJwZXBja2w1b2I3&utm_source=qr" target="_blank">Instagram</a>
     </div>
 </nav>
@@ -535,7 +518,6 @@
     <h1>Obenewa<br><em>Adu</em></h1>
     <p class="hero-sub">Blending marketing, psychology, and creative strategy to build campaigns that genuinely connect with people.</p>
     <a href="#about" class="hero-cta">Discover My Work</a>
-    <span class="hero-scroll">Scroll</span>
 </section>
 
 <!-- STATS -->
@@ -563,7 +545,7 @@
     <div class="about-text">
         <p class="section-label">About</p>
         <h2 class="section-title">Hello, I'm Obenewa</h2>
-        <p>Originally from New York and now based in London, I work in marketing with a Psychology background that shapes everything I do. I blend creative thinking with data-driven strategy to build campaigns and brands that genuinely resonate with people.</p>
+        <p>Originally from New York and now based in London, I studied Psychology and Marketing â and that combination shapes everything I do. I blend creative thinking with data-driven strategy to build campaigns and brands that genuinely resonate with people.</p>
         <p>I'm equally comfortable analysing consumer behaviour with SPSS as I am crafting brand narratives or building AI agents that automate complex marketing workflows. The best work happens when intuition and analysis work together. Creative thinking backed by real data, strategy grounded in human psychology.</p>
     </div>
 </section>
@@ -636,7 +618,7 @@
         <div class="afia-detail">
             <span class="afia-card-tag">Capsule Collection</span>
             <h3>Swimwear &amp; Ready-to-Wear</h3>
-            <p class="afia-detail-text">Translating research into a capsule collection that bridges heritage craft and modern design sensibility.</p>
+            <p class="afia-detail-text">Translating research into a capsule collection that bridges heritage craft and contemporary luxury.</p>
         </div>
     </div>
     <a href="https://www.instagram.com/madebyafia?igsh=ZHJwZXBja2w1b2I3&utm_source=qr" target="_blank" class="afia-ig fade-in">Follow @madebyafia on Instagram &rarr;</a>
@@ -659,7 +641,7 @@
 <!-- RESEARCH -->
 <section class="research" id="research">
     <p class="section-label fade-in">Academic</p>
-    <h2 class="section-title fade-in">Research</h2>2>
+    <h2 class="section-title fade-in">Research</h2>
     <div class="research-list">
         <div class="research-item fade-in">
             <span class="research-num">01</span>
@@ -678,7 +660,7 @@
             <span class="research-num">02</span>
             <div>
                 <h3>Sleep, Stress &amp; Personality Factors</h3>
-                <p>Investigated predictive relationships between neuroticism, psychopathy, stress, and sleep latency. Found neuroticism significantly predicted longer sleep latency (p &lt; .001).</p>
+                <p>Investigated predictive relationships between neuroticism, psychopathy, stress, and sleep latency. Found neuroticism significantly predicted longer sleep latency (p &#60; .001).</p>
                 <div class="research-tags">
                     <span class="research-tag">SPSS</span>
                     <span class="research-tag">Regression</span>
@@ -731,6 +713,8 @@
         <span class="tool-pill">Windsurf</span>
         <span class="tool-pill">Claude</span>
         <span class="tool-pill">Modash</span>
+        <span class="tool-pill">Talent Sourcing</span>
+        <span class="tool-pill">CRM</span>
     </div>
 </section>
 
