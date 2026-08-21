@@ -102,6 +102,7 @@
         .section-intro h2 { margin: 0; font-family: Didot, "Bodoni 72", "Times New Roman", serif; font-size: clamp(56px, 9vw, 140px); font-weight: 400; line-height: .84; letter-spacing: -.06em; }
         .project-list { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
         .project {
+          scroll-margin-top: 88px;
           position: relative;
           min-height: 420px;
           border: 1px solid var(--ink);
@@ -131,8 +132,8 @@
         .about__copy { align-self: end; font-size: 18px; line-height: 1.35; }
         .about__copy p { margin: 0 0 22px; }
         .capabilities { border-top: 2px solid var(--paper); }
-        .capabilities div { display: grid; grid-template-columns: 70px 1fr auto; align-items: center; border-bottom: 1px solid rgba(243,239,231,.35); padding: 18px 0; font-size: clamp(22px, 3vw, 48px); font-weight: 800; letter-spacing: -.04em; transition: .2s; }
-        .capabilities div:hover { color: var(--pink); padding-left: 14px; }
+        .capabilities a { display: grid; grid-template-columns: 70px 1fr auto; align-items: center; border-bottom: 1px solid rgba(243,239,231,.35); padding: 18px 0; font-size: clamp(22px, 3vw, 48px); font-weight: 800; letter-spacing: -.04em; transition: .2s; }
+        .capabilities a:hover { color: var(--pink); padding-left: 14px; }
         .capabilities span { font-size: 10px; letter-spacing: .1em; }
         .capabilities b { font-size: 22px; }
 
@@ -202,7 +203,7 @@
             AND GROW BRANDS<span class="hero__dot">.</span>
         </h1>
         <div class="hero__bottom">
-            <p>My work sits between product and performance: websites, tools, paid media and the systems that make marketing work harder.</p>
+            <p>My work sits between product and performance: websites, tools, paid media and the systems behind them.</p>
             <a class="hero__cta" href="#about">MORE ABOUT ME &darr;</a>
         </div>
     </section>
@@ -216,17 +217,17 @@
                 One joined-up view.
             </p>
             <div class="about__copy">
-                <p>I started in software development and moved into marketing, where the product and the customer finally met. That combination shapes how I work: I understand what needs to be built, how it should reach people and what success should look like.</p>
+                <p>I started in software development and moved into marketing, where the product and the consumer finally met. That combination shapes how I work: I understand what needs to be built, how it should reach people and what success should look like.</p>
                 <p>Today I work across development, paid media, creator partnerships, search visibility and AI-enabled operations. Different disciplines, one goal: make brands easier to find, choose and grow.</p>
             </div>
         </div>
         <div class="capabilities">
-            <div><span>01</span>SOFTWARE DEVELOPMENT<b>&#8599;</b></div>
-            <div><span>02</span>PAID SEARCH<b>&#8599;</b></div>
-            <div><span>03</span>PAID SOCIAL<b>&#8599;</b></div>
-            <div><span>04</span>LANDING PAGES<b>&#8599;</b></div>
-            <div><span>05</span>CONSUMER INSIGHT<b>&#8599;</b></div>
-            <div><span>06</span>MEASUREMENT &amp; REPORTING<b>&#8599;</b></div>
+            <a href="#service-05"><span>01</span>SOFTWARE DEVELOPMENT<b>&#8599;</b></a>
+            <a href="#service-03"><span>02</span>PAID SEARCH<b>&#8599;</b></a>
+            <a href="#service-02"><span>03</span>PAID SOCIAL<b>&#8599;</b></a>
+            <a href="#service-01"><span>04</span>TALENT PARTNERSHIPS<b>&#8599;</b></a>
+            <a href="#service-04"><span>05</span>CONSUMER INSIGHT<b>&#8599;</b></a>
+            <a href="#service-06"><span>06</span>MEASUREMENT &amp; REPORTING<b>&#8599;</b></a>
         </div>
     </section>
 
@@ -236,32 +237,32 @@
             <h2>WHAT<br>I DO.</h2>
         </div>
         <div class="project-list">
-            <article class="project project--acid">
+            <article class="project project--acid" id="service-01">
                 <span class="project__number">/01</span>
                 <h3><span>Talent Sourcing</span><span>&amp; Management</span></h3>
                 <p>Finding the right creators and brand partners, then running the relationship end to end: briefing, contracting, content approvals and performance feedback that keep partnerships delivering past the first post.</p>
             </article>
-            <article class="project project--ink">
+            <article class="project project--ink" id="service-02">
                 <span class="project__number">/02</span>
                 <h3><span>Paid Social</span></h3>
                 <p>Planning, building and optimising full-funnel social campaigns. Creative testing, budget pacing and reporting that ties spend to revenue rather than vanity metrics.</p>
             </article>
-            <article class="project project--pink">
+            <article class="project project--pink" id="service-03">
                 <span class="project__number">/03</span>
                 <h3><span>Paid Search</span></h3>
                 <p>Building and managing search campaigns around real purchase intent. Clean account structures, sharp keyword strategy and bidding that protects profitability.</p>
             </article>
-            <article class="project project--pink">
+            <article class="project project--pink" id="service-04">
                 <span class="project__number">/04</span>
                 <h3><span>SEO / GEO</span></h3>
                 <p>Visibility where people actually look: search engines and AI answers. I audit how a brand shows up in both, then close the gaps keeping it invisible.</p>
             </article>
-            <article class="project project--acid">
+            <article class="project project--acid" id="service-05">
                 <span class="project__number">/05</span>
                 <h3><span>Research &amp;</span><span>Development</span></h3>
                 <p>Designing and developing websites, AI tools and internal products, from concept to live.</p>
             </article>
-            <article class="project project--ink">
+            <article class="project project--ink" id="service-06">
                 <span class="project__number">/06</span>
                 <h3><span>AI</span><span>Augmentation</span></h3>
                 <p>Integrating AI across business operations: custom chatbots, autonomous agents and automated reporting that reduce manual work and increase capacity.</p>
