@@ -17,13 +17,12 @@
     <meta name="twitter:description" content="Software development and performance marketing in one practice.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Anton&family=La+Belle+Aurore&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=La+Belle+Aurore&display=swap" rel="stylesheet">
     <style>
         :root {
-          --pink: #dda2ac;
-          --ink: #171008;
-          --white: #fbf6ef;
-          --tape: rgba(23, 16, 8, 0.78);
+          --pink: #dea3ad;
+          --ink: #191114;
+          --white: #fdfaf6;
         }
 
         * { box-sizing: border-box; }
@@ -32,252 +31,138 @@
           margin: 0;
           background: var(--pink);
           color: var(--ink);
-          font-family: "Archivo", "Helvetica Neue", Helvetica, Arial, sans-serif;
+          font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
           overflow-x: hidden;
+          -webkit-font-smoothing: antialiased;
         }
-        main { position: relative; max-width: 1280px; margin: 0 auto; }
+        main { max-width: 1080px; margin: 0 auto; padding: 0 32px; }
         a { color: inherit; text-decoration: none; }
         ::selection { background: var(--ink); color: var(--pink); }
-        .display { font-family: "Anton", "Arial Narrow", sans-serif; font-weight: 400; text-transform: uppercase; }
-        .script { font-family: "La Belle Aurore", cursive; text-transform: none; font-weight: 400; }
 
+        .head {
+          font-weight: 800;
+          text-transform: uppercase;
+          letter-spacing: -.01em;
+          line-height: 1.05;
+        }
         .caps {
-          font-size: 12px;
+          font-size: 10.5px;
           font-weight: 700;
-          letter-spacing: .08em;
+          letter-spacing: .1em;
           text-transform: uppercase;
         }
         .fineprint {
-          font-size: 11.5px;
+          font-size: 10.5px;
           font-weight: 500;
-          letter-spacing: .05em;
-          line-height: 1.8;
+          letter-spacing: .06em;
+          line-height: 1.9;
           text-transform: uppercase;
-          text-align: justify;
-          color: rgba(23, 16, 8, .88);
+          text-align: left;
+          color: rgba(25, 17, 20, .8);
         }
 
         .nav {
           position: sticky;
           top: 0;
           z-index: 30;
-          height: 58px;
-          display: grid;
-          grid-template-columns: 1fr auto 1fr;
+          display: flex;
+          justify-content: space-between;
           align-items: center;
-          padding: 0 26px;
-          background: rgba(221, 162, 172, 0.95);
+          padding: 20px 32px;
+          background: rgba(222, 163, 173, .96);
           backdrop-filter: blur(8px);
           font-size: 10px;
           font-weight: 700;
-          letter-spacing: .16em;
-          border-bottom: 1px solid rgba(23,16,8,.25);
+          letter-spacing: .14em;
         }
-        .wordmark { font-family: "Anton", sans-serif; font-size: 19px; letter-spacing: .05em; }
-        .wordmark span { font-size: 8px; vertical-align: top; margin-left: 2px; }
-        .nav__status { display: flex; justify-content: center; }
-        .nav nav { display: flex; justify-content: flex-end; gap: 22px; }
+        .wordmark { font-size: 14px; font-weight: 800; letter-spacing: .06em; }
+        .wordmark span { font-size: 7px; vertical-align: top; }
+        .nav nav { display: flex; gap: 24px; }
         .nav nav a:hover { text-decoration: underline; text-underline-offset: 4px; }
 
-        section { padding: 54px 30px 70px; }
-
-        .page-head { margin: 0 0 10px -0.04em; font-size: clamp(40px, 6vw, 78px); line-height: .95; letter-spacing: .01em; }
-        .page-sub { margin: 6px 0 14px; }
-        .rule { border: 0; border-top: 1px solid rgba(23,16,8,.4); margin: 26px 0 0; }
+        section { padding: 90px 0; }
 
         /* HERO */
-        .hero { position: relative; min-height: calc(92svh - 58px); display: flex; flex-direction: column; }
-        .hero__head { position: relative; }
-        .hero__head .script-inline {
-          display: block;
-          color: var(--white);
-          font-size: clamp(46px, 6.6vw, 86px);
-          line-height: .62;
-          transform: rotate(-3deg);
-          margin: 4px 0 2px 14%;
-        }
-        .hero__fine { max-width: 620px; column-count: 2; column-gap: 26px; margin: 18px 0 0; }
-        .hero__collage { position: relative; flex: 1; min-height: 300px; }
-        .hero__note {
-          position: absolute;
-          background: var(--white);
-          box-shadow: 0 10px 24px rgba(23,16,8,.22);
-          padding: 16px 18px;
-          width: 240px;
-        }
-        .hero__note .caps { font-size: 10px; letter-spacing: .14em; }
-        .hero__note.n1 { left: 8%; top: 22%; transform: rotate(-4deg); }
-        .hero__note.n2 { left: 42%; top: 40%; transform: rotate(2.5deg); }
-        .hero__note.n3 { right: 8%; top: 18%; transform: rotate(-2deg); }
-        .hero__note::before {
-          content: "";
-          position: absolute;
-          top: -10px;
-          left: 50%;
-          width: 68px;
-          height: 19px;
-          transform: translateX(-50%) rotate(-3deg);
-          background: var(--tape);
-        }
-        .hero__scrawl {
-          position: absolute;
-          left: 12%;
-          bottom: 6%;
-          font-size: clamp(30px, 3.4vw, 46px);
-          transform: rotate(-6deg);
-          color: var(--ink);
-        }
-        .hero__cta {
-          position: absolute;
-          right: 4%;
-          bottom: 8%;
-          padding: 12px 20px;
-          border: 1px solid var(--ink);
-          font-size: 10px;
-          font-weight: 700;
-          letter-spacing: .16em;
-          transition: .2s;
-          background: rgba(251,246,239,.35);
-        }
-        .hero__cta:hover { background: var(--ink); color: var(--pink); }
-
-        /* ABOUT */
-        .about { border-top: 1px solid rgba(23,16,8,.35); }
-        .about__fine { max-width: 760px; column-count: 2; column-gap: 30px; margin: 20px 0 0; }
-        .about__collage { position: relative; margin: 60px auto 0; height: 430px; max-width: 1000px; }
-        .cap-note {
-          position: absolute;
-          background: var(--white);
-          box-shadow: 0 10px 24px rgba(23,16,8,.22);
-          padding: 18px 20px 16px;
-          width: 250px;
-          transition: transform .2s;
-        }
-        .cap-note::before {
-          content: "";
-          position: absolute;
-          top: -10px;
-          left: 50%;
-          width: 64px;
-          height: 18px;
-          transform: translateX(-50%) rotate(-4deg);
-          background: var(--tape);
-        }
-        .cap-note:hover { transform: rotate(0deg) scale(1.03) !important; z-index: 5; }
-        .cap-note .caps { display: block; font-size: 12.5px; letter-spacing: .1em; }
-        .cap-note small { display: block; margin-top: 6px; font-size: 9px; font-weight: 600; letter-spacing: .14em; color: rgba(23,16,8,.55); }
-        .cap-note.c1 { left: 2%; top: 6%; transform: rotate(-5deg); }
-        .cap-note.c2 { left: 36%; top: 0%; transform: rotate(2deg); }
-        .cap-note.c3 { right: 3%; top: 9%; transform: rotate(-2.5deg); }
-        .cap-note.c4 { left: 8%; top: 52%; transform: rotate(3deg); }
-        .cap-note.c5 { left: 40%; top: 58%; transform: rotate(-3.5deg); }
-        .cap-note.c6 { right: 5%; top: 54%; transform: rotate(2deg); }
-        .about__scrawl {
-          position: absolute;
-          left: 50%;
-          top: 40%;
-          transform: translateX(-50%) rotate(-7deg);
-          font-size: clamp(34px, 4.2vw, 56px);
-          color: var(--ink);
-          white-space: nowrap;
-          pointer-events: none;
-          z-index: 4;
-        }
-
-        /* SERVICES */
-        .work { border-top: 1px solid rgba(23,16,8,.35); }
-        .work__collage { position: relative; margin-top: 46px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 46px 30px; }
-        .project {
-          position: relative;
-          background: var(--white);
-          box-shadow: 0 12px 26px rgba(23,16,8,.22);
-          padding: 22px 22px 20px;
+        .hero {
+          min-height: calc(88svh - 64px);
           display: flex;
           flex-direction: column;
-          scroll-margin-top: 90px;
-          transition: transform .22s;
+          justify-content: center;
+          text-align: center;
         }
-        .project::before {
+        .hero .caps { margin-bottom: 34px; }
+        .hero h1 { margin: 0; font-size: clamp(30px, 4.4vw, 52px); position: relative; }
+        .hero__fine { max-width: 400px; margin: 40px auto 0; text-align: center; }
+
+        .divider { border: 0; border-top: 1px solid rgba(25,17,20,.3); margin: 0; }
+
+        /* ABOUT */
+        .about h2 { margin: 0 0 10px; font-size: clamp(26px, 3.2vw, 40px); }
+        .about__strap { margin: 0 0 26px; }
+        .about__fine { max-width: 520px; }
+
+        /* SERVICES */
+        .work { text-align: center; }
+        .work h2 { margin: 0 0 64px; font-size: clamp(26px, 3.2vw, 40px); }
+        .work__grid {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 28px;
+          text-align: left;
+        }
+        .card {
+          position: relative;
+          background: var(--white);
+          padding: 26px 24px 28px;
+          box-shadow: 0 8px 26px rgba(25,17,20,.14);
+          scroll-margin-top: 90px;
+        }
+        .card::before {
           content: "";
           position: absolute;
-          top: -11px;
+          top: -9px;
           left: 50%;
-          width: 74px;
-          height: 20px;
-          transform: translateX(-50%) rotate(-3deg);
-          background: var(--tape);
+          width: 56px;
+          height: 16px;
+          transform: translateX(-50%) rotate(-2deg);
+          background: rgba(25, 17, 20, .75);
         }
-        .project:nth-child(1) { transform: rotate(-2.4deg); }
-        .project:nth-child(2) { transform: rotate(1.6deg) translateY(16px); }
-        .project:nth-child(3) { transform: rotate(-1.4deg) translateY(4px); }
-        .project:nth-child(4) { transform: rotate(2deg); }
-        .project:nth-child(5) { transform: rotate(-1.8deg) translateY(14px); }
-        .project:nth-child(6) { transform: rotate(1.2deg); }
-        .project:hover { transform: rotate(0) translateY(-2px); z-index: 5; }
-        .project__number { font-size: 9px; font-weight: 700; letter-spacing: .18em; margin-bottom: 14px; }
-        .project h3 { margin: 0 0 10px; font-family: "Anton", sans-serif; font-weight: 400; text-transform: uppercase; font-size: 19px; line-height: 1.08; letter-spacing: .02em; }
-        .project p { margin: 0; font-size: 12.5px; line-height: 1.65; font-weight: 500; color: rgba(23,16,8,.86); }
-        .project .script { margin-top: auto; padding-top: 16px; font-size: 21px; line-height: 1; color: #b95c72; }
-        .work__scrawl { display: block; margin: 44px auto 0; width: max-content; font-size: clamp(30px, 3.6vw, 46px); transform: rotate(-5deg); color: var(--ink); }
+        .card h3 { margin: 0 0 12px; font-size: 13px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+        .card p { margin: 0; font-size: 12px; line-height: 1.7; font-weight: 500; color: rgba(25,17,20,.78); }
 
         /* CONTACT */
-        .contact { border-top: 1px solid rgba(23,16,8,.35); text-align: center; padding-bottom: 56px; }
-        .contact__top { display: flex; justify-content: space-between; text-align: left; }
-        .contact h2 { position: relative; margin: 70px auto 8px; font-size: clamp(38px, 5.6vw, 72px); line-height: 1.04; max-width: 900px; }
-        .contact h2 .script-inline { color: var(--white); font-size: 1.5em; line-height: .5; display: inline-block; transform: rotate(-3deg); vertical-align: -8%; margin: 0 6px; }
-        .contact__sub { margin: 14px 0 6px; }
-        .contact__intro { max-width: 470px; margin: 10px auto 40px; }
-        .contact__intro.fineprint { text-align: center; }
-        .contact__links { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
-        .contact__links a {
-          border: 1px solid var(--ink);
-          padding: 15px 26px;
-          font-size: 10px;
-          font-weight: 700;
-          letter-spacing: .18em;
-          transition: .2s;
-          background: rgba(251,246,239,.35);
-        }
-        .contact__links a:hover { background: var(--ink); color: var(--pink); }
-        .contact__sign { display: block; margin: 46px auto 0; width: max-content; font-size: clamp(30px, 3.4vw, 44px); transform: rotate(-5deg); }
+        .contact { text-align: center; padding-bottom: 110px; }
+        .contact h2 { margin: 0; font-size: clamp(28px, 3.6vw, 46px); }
+        .contact__fine { max-width: 380px; margin: 30px auto 0; text-align: center; }
+        .contact__links { display: flex; justify-content: center; gap: 34px; margin-top: 48px; flex-wrap: wrap; }
+        .contact__links a { border-bottom: 1px solid var(--ink); padding-bottom: 3px; font-size: 10px; font-weight: 700; letter-spacing: .16em; }
+        .contact__links a:hover { color: var(--white); border-color: var(--white); }
+
+        .contact__sign { display: block; width: max-content; margin: 70px auto 0; font-family: "La Belle Aurore", cursive; font-size: 30px; transform: rotate(-4deg); }
 
         footer {
           display: flex;
           justify-content: space-between;
-          background: var(--ink);
-          color: var(--pink);
-          padding: 20px 26px;
+          gap: 16px;
+          padding: 22px 32px;
           font-size: 9px;
           font-weight: 700;
-          letter-spacing: .16em;
+          letter-spacing: .14em;
+          border-top: 1px solid rgba(25,17,20,.3);
+          text-transform: uppercase;
         }
 
-        @media (max-width: 820px) {
-          section { padding: 40px 16px 52px; }
-          .nav { height: 52px; grid-template-columns: 1fr auto; padding: 0 14px; }
-          .nav__status { display: none; }
-          .nav nav { gap: 12px; font-size: 8.5px; }
-          .page-head { font-size: clamp(34px, 9.5vw, 52px); }
-          .caps { font-size: 10.5px; }
-          .hero { min-height: 0; }
-          .hero__head .script-inline { font-size: clamp(38px, 10.5vw, 56px); margin-left: 10%; }
-          .hero__fine { column-count: 1; max-width: 100%; }
-          .hero__collage { min-height: 0; margin-top: 34px; display: flex; flex-direction: column; gap: 26px; align-items: center; }
-          .hero__note { position: static; width: min(300px, 88%); }
-          .hero__note.n1 { transform: rotate(-3deg); }
-          .hero__note.n2 { transform: rotate(2deg); }
-          .hero__note.n3 { transform: rotate(-2deg); }
-          .hero__scrawl { position: static; display: block; width: max-content; margin: 30px auto 0; }
-          .hero__cta { position: static; display: block; width: max-content; margin: 22px auto 0; }
-          .about__fine { column-count: 1; }
-          .about__collage { height: auto; margin-top: 40px; display: flex; flex-direction: column; gap: 26px; align-items: center; }
-          .cap-note { position: static; width: min(300px, 88%); }
-          .about__scrawl { position: static; display: block; width: max-content; margin: 6px auto; transform: rotate(-6deg); }
-          .work__collage { grid-template-columns: 1fr; gap: 34px; }
-          .project:nth-child(2), .project:nth-child(5) { transform: rotate(1.6deg); }
-          .contact__top span:last-child { display: none; }
-          .contact h2 { margin-top: 46px; }
-          footer { gap: 12px; flex-wrap: wrap; padding: 16px 14px; }
+        @media (max-width: 760px) {
+          main { padding: 0 20px; }
+          .nav { padding: 16px 20px; }
+          .nav nav { gap: 14px; font-size: 9px; }
+          .nav .nav__status { display: none; }
+          section { padding: 64px 0; }
+          .hero h1 { font-size: clamp(26px, 7.2vw, 34px); }
+          .work__grid { grid-template-columns: 1fr; gap: 34px; }
+          .contact__sign { display: block; width: max-content; margin: 70px auto 0; font-family: "La Belle Aurore", cursive; font-size: 30px; transform: rotate(-4deg); }
+
+        footer { flex-wrap: wrap; padding: 18px 20px; }
           footer span:nth-child(2) { display: none; }
         }
 
@@ -285,121 +170,83 @@
     </style>
 </head>
 <body>
+<header class="nav">
+    <a class="wordmark" href="#top" aria-label="Obenewa Adu, home">OBENEWA</a>
+    <div class="nav__status caps">LONDON / NEW YORK</div>
+    <nav aria-label="Primary navigation">
+        <a href="#about">ABOUT</a>
+        <a href="#work">SERVICES</a>
+        <a href="#contact">CONTACT &#8599;</a>
+    </nav>
+</header>
 <main>
-    <header class="nav">
-        <a class="wordmark" href="#top" aria-label="Obenewa Adu, home">OBENEWA<span>&reg;</span></a>
-        <div class="nav__status">LONDON / NEW YORK</div>
-        <nav aria-label="Primary navigation">
-            <a href="#about">ABOUT</a>
-            <a href="#work">SERVICES</a>
-            <a href="#contact">CONTACT &#8599;</a>
-        </nav>
-    </header>
-
     <section class="hero" id="top">
-        <div class="hero__head">
-            <h1 class="page-head display">
-                I BUILD DIGITAL
-                <span class="script-inline script">experiences</span>
-                AND GROW BRANDS.
-            </h1>
-        </div>
-        <p class="page-sub caps">MARKETING, MEDIA AND THE SYSTEMS THAT RUN THEM.</p>
-        <p class="hero__fine fineprint">My work sits between product and performance: websites, tools, paid media and everything that connects them. I started in software development and moved into marketing, where the product and the consumer finally met.</p>
-        <div class="hero__collage">
-            <div class="hero__note n1"><span class="caps">SOFTWARE DEVELOPMENT</span></div>
-            <div class="hero__note n2"><span class="caps">PAID MEDIA</span></div>
-            <div class="hero__note n3"><span class="caps">CONSUMER INSIGHT</span></div>
-            <span class="hero__scrawl script" aria-hidden="true">xx obenewa</span>
-            <a class="hero__cta" href="#about">MORE ABOUT ME &darr;</a>
-        </div>
+        <p class="caps">MARKETING, MEDIA AND THE SYSTEMS THAT RUN THEM.</p>
+        <h1 class="head">I BUILD DIGITAL EXPERIENCES<br>AND GROW BRANDS.</h1>
+        <p class="hero__fine fineprint">My work sits between product and performance: websites, tools, paid media, and everything that connects them.</p>
     </section>
 
+    <hr class="divider">
+
     <section class="about" id="about">
-        <span class="caps">(01 — ABOUT)</span>
-        <h2 class="page-head display" style="margin-top:18px;">ABOUT ME</h2>
-        <p class="page-sub caps">TECHNICAL DEPTH. COMMERCIAL INSTINCT. ONE JOINED-UP VIEW.</p>
+        <h2 class="head">ABOUT ME</h2>
+        <p class="about__strap caps">TECHNICAL DEPTH. COMMERCIAL INSTINCT. ONE JOINED-UP VIEW.</p>
         <div class="about__fine fineprint">
             <p style="margin:0 0 14px;">I started in software development and moved into marketing, where the product and the consumer finally met. That combination shapes how I work: I understand what needs to be built, how it should reach people and what success should look like.</p>
             <p style="margin:0;">Today I work across marketing, paid media, creator partnerships, search visibility, development and AI-enabled operations. Different disciplines, one goal: make brands easier to find, choose and grow.</p>
         </div>
-        <div class="about__collage">
-            <a class="cap-note c1" href="#service-05"><span class="caps">SOFTWARE DEVELOPMENT</span><small>/01 &nbsp;&#8599;</small></a>
-            <a class="cap-note c2" href="#service-03"><span class="caps">PAID SEARCH</span><small>/02 &nbsp;&#8599;</small></a>
-            <a class="cap-note c3" href="#service-02"><span class="caps">PAID SOCIAL</span><small>/03 &nbsp;&#8599;</small></a>
-            <a class="cap-note c4" href="#service-01"><span class="caps">TALENT PARTNERSHIPS</span><small>/04 &nbsp;&#8599;</small></a>
-            <a class="cap-note c5" href="#service-04"><span class="caps">CONSUMER INSIGHT</span><small>/05 &nbsp;&#8599;</small></a>
-            <a class="cap-note c6" href="#service-06"><span class="caps">MEASUREMENT &amp; REPORTING</span><small>/06 &nbsp;&#8599;</small></a>
-            <span class="about__scrawl script" aria-hidden="true">one joined-up view.</span>
-        </div>
     </section>
+
+    <hr class="divider">
 
     <section class="work" id="work">
-        <span class="caps">(02 — SERVICES)</span>
-        <h2 class="page-head display" style="margin-top:18px;">WHAT I DO.</h2>
-        <p class="page-sub caps">SIX WAYS IN.</p>
-        <div class="work__collage">
-            <article class="project" id="service-01">
-                <span class="project__number">/01</span>
+        <h2 class="head">WHAT I DO.</h2>
+        <div class="work__grid">
+            <article class="card" id="service-01">
                 <h3>Talent Sourcing &amp; Management</h3>
                 <p>Finding the right creators and brand partners, then running the relationship end to end: briefing, contracting, content approvals and performance feedback that keep partnerships delivering past the first post.</p>
-                <span class="script">the right people</span>
             </article>
-            <article class="project" id="service-02">
-                <span class="project__number">/02</span>
+            <article class="card" id="service-02">
                 <h3>Paid Social</h3>
                 <p>Planning, building and optimising full-funnel social campaigns. Creative testing, budget pacing and reporting that ties spend to revenue rather than vanity metrics.</p>
-                <span class="script">spend that sells</span>
             </article>
-            <article class="project" id="service-03">
-                <span class="project__number">/03</span>
+            <article class="card" id="service-03">
                 <h3>Paid Search</h3>
                 <p>Building and managing search campaigns around real purchase intent. Clean account structures, sharp keyword strategy and bidding that protects profitability.</p>
-                <span class="script">found on purpose</span>
             </article>
-            <article class="project" id="service-04">
-                <span class="project__number">/04</span>
+            <article class="card" id="service-04">
                 <h3>SEO / GEO</h3>
                 <p>Visibility where people actually look: search engines and AI answers. I audit how a brand shows up in both, then close the gaps keeping it invisible.</p>
-                <span class="script">seen everywhere</span>
             </article>
-            <article class="project" id="service-05">
-                <span class="project__number">/05</span>
+            <article class="card" id="service-05">
                 <h3>Research &amp; Development</h3>
                 <p>Designing and developing websites, AI tools and internal products, from concept to live.</p>
-                <span class="script">concept to live</span>
             </article>
-            <article class="project" id="service-06">
-                <span class="project__number">/06</span>
+            <article class="card" id="service-06">
                 <h3>AI Augmentation</h3>
                 <p>Integrating AI across business operations: custom chatbots, autonomous agents and automated reporting that reduce manual work and increase capacity.</p>
-                <span class="script">work, multiplied</span>
             </article>
         </div>
-        <span class="work__scrawl script" aria-hidden="true">xx obenewa</span>
     </section>
 
+    <hr class="divider">
+
     <section class="contact" id="contact">
-        <div class="contact__top">
-            <span class="caps">(03 — CONTACT)</span>
-            <span class="caps">AVAILABLE FOR FREELANCE PROJECTS</span>
-        </div>
-        <h2 class="display">WHAT DOES <span class="script-inline script">your brand</span> NEED NEXT?</h2>
-        <p class="contact__intro fineprint">Have a product to build, a campaign to improve or an ambitious problem that sits somewhere between the two? Let&rsquo;s talk.</p>
+        <h2 class="head">WHAT DOES YOUR BRAND<br>NEED NEXT?</h2>
+        <p class="contact__fine fineprint">Have a product to build, a campaign to improve or an ambitious problem that sits somewhere between the two? Let&rsquo;s talk.</p>
         <div class="contact__links">
             <a href="mailto:obenewa@obenewa.co.uk">EMAIL ME &#8599;</a>
             <a href="https://www.linkedin.com/in/obenewa" target="_blank" rel="noreferrer">LINKEDIN &#8599;</a>
             <a href="https://github.com/haba-create" target="_blank" rel="noreferrer">GITHUB &#8599;</a>
             <a href="https://www.instagram.com/madebyafia?igsh=ZHJwZXBja2w1b2I3&utm_source=qr" target="_blank" rel="noreferrer">INSTAGRAM &#8599;</a>
         </div>
-        <span class="contact__sign script" aria-hidden="true">xx obenewa</span>
+        <span class="contact__sign" aria-hidden="true">xx obenewa</span>
     </section>
-
-    <footer>
-        <span>&copy; 2026 OBENEWA ADU</span>
-        <span>MARKETING / PAID MEDIA / DEVELOPMENT</span>
-        <a href="#top">BACK TO TOP &uarr;</a>
-    </footer>
 </main>
+<footer>
+    <span>&copy; 2026 OBENEWA ADU</span>
+    <span>MARKETING / PAID MEDIA / DEVELOPMENT</span>
+    <a href="#top">BACK TO TOP &uarr;</a>
+</footer>
 </body>
 </html>
