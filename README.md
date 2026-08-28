@@ -1,82 +1,32 @@
-Obenewa Adu | Psychology Meets Marketing
-A professional and abstract portfolio website showcasing the intersection of psychology and marketing expertise.
-🎯 About This Site
-This website presents Obenewa Adu's unique background combining a Bachelor of Arts in Psychology with Marketing concentration, currently based in London, UK. The site demonstrates how psychological insights can be applied to create effective marketing strategies.
-🌟 Features
+# obenewa.co.uk
 
-Abstract Design: Clean, professional layout with soft pink gradients and minimalist elements
-Responsive: Optimized for all device sizes from mobile to desktop
-Modern Animations: Subtle hover effects and transitions for enhanced user experience
-Professional Content: Curated information highlighting key skills and expertise
-Easy Navigation: Intuitive layout with fixed navigation and smooth scrolling sections
+Personal portfolio of Obenewa Adu — creative, commercial and technical operator working across New York and London.
 
-📋 Sections
+## Stack
 
-Hero Section: Eye-catching introduction with name and tagline
-About: Overview of background and unique perspective
-Skills: Core competencies in psychology-driven marketing
-Toolkit: Technical and creative tools expertise
-Connect: Call-to-action with contact information
+- Next.js (App Router) with React and TypeScript
+- Hand-written CSS in `app/globals.css` (no framework)
+- Static assets in `public/`
 
-🛠 Skills Highlighted
+## Structure
 
-Consumer Behaviour Analysis
-Brand Development & Identity
-Digital Marketing Strategy
-Content Creation & Social Media Management
-Data Analytics & Market Research
-GenAI, Prompting & Agents
+- `/` — home: hero, about, What I Do, contact
+- `/work` — case-study index
+- `/work/creator-campaign` — creator partnerships case study
+- `/work/haircare-ugc-campaign` — UGC and shoot production case study
+- `/work/afia` — AFIA textile research and product development case study
 
-🔧 Technologies Used
+Project copy lives in `content/projects.ts`; shared case-study layout and slideshows live in `components/`.
 
-Frontend: HTML5, CSS3, JavaScript
-Design: Custom gradient designs, CSS animations
-Typography: Clean, readable fonts optimized for web
-Tools: Adobe Photoshop, Figma, Canva, Jira, Microsoft Excel, SPSS, and more
+## Development
 
-🚀 Deployment
-This site is designed to be deployed using GitHub Pages:
+```bash
+npm install
+npm run dev     # local dev server
+npm run build   # production build
+npm start       # serve the production build
+```
 
-Upload your files to a GitHub repository
-Enable GitHub Pages in Settings
-Your site will be available at: https://USERNAME.github.io/REPOSITORY-NAME/
+## Deployment
 
-📁 File Structure
-/
-├── index.html          # Main website file
-├── README.md          # This documentation
-└── [any additional assets]
-💻 Local Development
-To view the site locally:
-
-Clone or download the repository
-Open index.html in your web browser
-That's it! No build process required.
-
-🎨 Design Philosophy
-The website follows a clean, abstract design approach with:
-
-Soft color palette for approachability
-Professional typography for credibility
-Subtle animations for engagement
-Strategic use of white space for clarity
-
-📱 Responsive Design
-The site adapts seamlessly across:
-
-Desktop (1200px+)
-Tablet (768px - 1199px)
-Mobile (< 768px)
-
-🤝 Contact
-For inquiries or collaborations:
-
-Email:https://www.obenewa.co.uk
-LinkedIn: linkedin.com/in/obenewa
-Location: London, United Kingdom
-
-📄 License
-All rights reserved. This website and its contents are the intellectual property of Obenewa Adu.
-
-Built with passion for bridging human behavior and strategic brand communication ✨
-Last Updated: 2025
+Hosted on Railway. Pushes to `main` auto-deploy.
