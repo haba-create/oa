@@ -1,4 +1,6 @@
 import SiteHeader from "../../components/site/SiteHeader";
+import AccessGate from "../../components/work/AccessGate";
+import { hasWorkAccess } from "../../lib/work-access";
 import { projectList } from "../../content/projects";
 import Image from "next/image";
 import type { Project } from "../../types/project";
@@ -20,7 +22,11 @@ function ProjectRow({ project }: { project: Project }) {
   );
 }
 
-export default function CaseStudiesPage() {
+export default async function CaseStudiesPage({ searchParams }: { searchParams: Promise<{ access?: string }> }) {
+  if (!(await hasWorkAccess())) {
+    return <AccessGate from="/work" denied={(await searchParams).access === "denied"} />;
+  }
+
   const talentProjects = projectList.filter((project) => project.group === "Talent Management & Sourcing");
   const researchProjects = projectList.filter((project) => project.group === "Research & Development");
 
