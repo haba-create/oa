@@ -12,8 +12,9 @@ export default function AccessGate({ from, denied = false }: AccessGateProps) {
       <SiteHeader context="PRIVATE" project hideAction />
       <main>
         <section className="gate">
-          <p className="caps">SELECTED WORK</p>
+          <p className="caps">CASE STUDIES</p>
           <h1 className="head">SHARED PRIVATELY.</h1>
+          <p className="gate__fine fineprint">Case studies are shared with an access code. If you don&rsquo;t have one, email me and I&rsquo;ll send it over.</p>
           <form action={unlockWork}>
             <input type="hidden" name="from" value={from} />
             <label className="sr-only" htmlFor="access-code">Access code</label>
