@@ -1,8 +1,13 @@
 import Image from "next/image";
 import ProjectPage from "../../../components/case-studies/ProjectPage";
+import AccessGate from "../../../components/work/AccessGate";
+import { hasWorkAccess } from "../../../lib/work-access";
 import { projects } from "../../../content/projects";
 
-export default function HaircareUgcCampaignPage() {
+export default async function HaircareUgcCampaignPage({ searchParams }: { searchParams: Promise<{ access?: string }> }) {
+  if (!(await hasWorkAccess())) {
+    return <AccessGate from="/work/haircare-ugc-campaign" denied={(await searchParams).access === "denied"} />;
+  }
   const shootGallery = (
     <section className="haircare-gallery" aria-labelledby="haircare-gallery-title">
       <div className="haircare-gallery__heading">

@@ -1,9 +1,14 @@
 import TextileSlideshow from "../../TextileSlideshow";
 import Image from "next/image";
 import ProjectPage from "../../../components/case-studies/ProjectPage";
+import AccessGate from "../../../components/work/AccessGate";
+import { hasWorkAccess } from "../../../lib/work-access";
 import { projects } from "../../../content/projects";
 
-export default function AfiaPage() {
+export default async function AfiaPage({ searchParams }: { searchParams: Promise<{ access?: string }> }) {
+  if (!(await hasWorkAccess())) {
+    return <AccessGate from="/work/afia" denied={(await searchParams).access === "denied"} />;
+  }
   const research = <>
         <div className="afia-research-intro">
           <p className="caps">THE RESEARCH FRAME</p>
