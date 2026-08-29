@@ -8,9 +8,9 @@ export default function Home() {
 
       <main>
         <section className="hero" id="top">
-          <p className="caps">CREATIVE DIRECTION / COMMERCIAL PERFORMANCE / TECHNICAL SYSTEMS</p>
+          <p className="caps">MARKETING, MEDIA AND THE SYSTEMS THAT RUN THEM.</p>
           <h1 className="head">I BUILD DIGITAL EXPERIENCES<br />AND GROW BRANDS.</h1>
-          <p className="hero__fine fineprint">I lead work across campaigns, media, products and the systems that connect them.</p>
+          <p className="hero__fine fineprint">MY WORK SITS BETWEEN PRODUCT AND PERFORMANCE: WEBSITES, TOOLS, PAID MEDIA, AND EVERYTHING THAT CONNECTS THEM.</p>
         </section>
 
         <hr className="divider" />
