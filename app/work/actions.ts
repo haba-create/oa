@@ -4,7 +4,7 @@ import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 import { WORK_ACCESS_COOKIE } from "../../lib/work-access";
 
-const ACCESS_CODE = (process.env.WORK_ACCESS_CODE ?? "FRIDAY").toUpperCase();
+const ACCESS_CODE = (process.env.WORK_ACCESS_CODE ?? "helloafia!").toUpperCase();
 
 export async function unlockWork(formData: FormData) {
   const code = String(formData.get("code") ?? "").trim().toUpperCase();
